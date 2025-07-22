@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spicy South - South Indian Restaurant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* ==== GLOBAL STYLES ==== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #fff3e0, #ffe0b2);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ==== HEADER ==== */
+    header {
+      background: linear-gradient(to right, #e65100, #ff9800);
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* ==== NAVIGATION ==== */
+    nav {
+      background-color: #ff6f00;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: yellow;
+    }
+
+    /* ==== MENU SECTION ==== */
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      color: #d84315;
+      margin-bottom: 20px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .menu-card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .menu-info {
+      padding: 15px;
+    }
+
+    .menu-info h3 {
+      font-size: 20px;
+      color: #bf360c;
+    }
+
+    .menu-info p {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    /* ==== FOOTER ==== */
+    footer {
+      background-color: #3e2723;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* ==== ANIMATIONS ==== */
+    .fade-in {
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Spicy South 🍛</h1>
+    <p>Authentic South Indian Restaurant</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Menu Section -->
+  <section id="menu" class="section fade-in">
+    <h2>Our Delicious Menu</h2>
+    <div class="menu-grid">
+
+      <!-- 20+ Food Items -->
+      <!-- You can replace images with your own hosted URLs -->
+      <div class="menu-card">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/08/dosa-recipe.jpg" alt="Dosa">
+        <div class="menu-info">
+          <h3>Dosa</h3>
+          <p>Crispy fermented rice pancake served with chutney & sambar.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/05/idli-recipe.jpg" alt="Idli">
+        <div class="menu-info">
+          <h3>Idli</h3>
+          <p>Soft steamed rice cakes, light and fluffy, with chutneys.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.cookwithmanali.com/wp-content/uploads/2017/01/Medu-Vada.jpg" alt="Vada">
+        <div class="menu-info">
+          <h3>Medu Vada</h3>
+          <p>Fried lentil donuts, crunchy outside, soft inside.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/01/venn-pongal-recipe.jpg" alt="Pongal">
+        <div class="menu-info">
+          <h3>Ven Pongal</h3>
+          <p>Ghee-roasted rice with pepper and cumin tempering.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/uttapam-recipe.jpg" alt="Uttapam">
+        <div class="menu-info">
+          <h3>Uttapam</h3>
+          <p>Thick dosa topped with onions, tomatoes, and chilies.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/05/upma-recipe.jpg" alt="Upma">
+        <div class="menu-info">
+          <h3>Upma</h3>
+          <p>Semolina cooked with veggies and tempered spices.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.cookwithmanali.com/wp-content/uploads/2018/11/Rava-Kesari.jpg" alt="Kesari">
+        <div class="menu-info">
+          <h3>Kesaribath</h3>
+          <p>Sweet semolina pudding with saffron and ghee.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://vegecravings.com/wp-content/uploads/2016/10/Sambhar-Recipe-Step-By-Step-Instructions.jpg" alt="Sambar">
+        <div class="menu-info">
+          <h3>Sambar</h3>
+          <p>Lentil-based veggie stew with tamarind & spices.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Shaheen_Ali/Shaheen_Ali-Chettinad_Chicken_Curry.jpg" alt="Chettinad Curry">
+        <div class="menu-info">
+          <h3>Chettinad Chicken</h3>
+          <p>Spicy chicken curry with coconut & pepper.</p>
+        </div>
+      </div>
+
+      <!-- More items... (10 more below) -->
+
+      <div class="menu-card">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/masala-dosa-recipe.jpg" alt="Masala Dosa">
+        <div class="menu-info">
+          <h3>Masala Dosa</h3>
+          <p>Dosa filled with spiced potato masala.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://rakskitchen.net/wp-content/uploads/2022/04/paruppu-vadai-recipe.jpg" alt="Paruppu Vadai">
+        <div class="menu-info">
+          <h3>Paruppu Vadai</h3>
+          <p>Lentil fritters with crispy texture and flavor.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/04/lemon-rice-2-500x500.jpg" alt="Lemon Rice">
+        <div class="menu-info">
+          <h3>Lemon Rice</h3>
+          <p>Flavored rice with lemon, curry leaves and mustard.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.subbuskitchen.com/wp-content/uploads/2018/01/South-Indian-Mini-Meals1.jpg" alt="Mini Tiffin">
+        <div class="menu-info">
+          <h3>Mini Tiffin</h3>
+          <p>Mini combo of dosa, idli, pongal and vada.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2022/07/rasam-recipe-1.jpg" alt="Rasam">
+        <div class="menu-info">
+          <h3>Rasam</h3>
+          <p>Spiced tamarind soup with tomato & pepper.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2019/03/chutney-recipe.jpg" alt="Coconut Chutney">
+        <div class="menu-info">
+          <h3>Coconut Chutney</h3>
+          <p>Fresh coconut dip with green chilies and curry leaves.</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.cookclickndevour.com/wp-content/uploads/2020/12/filter-coffee-recipe-1.jpg" alt="Filter Coffee">
+        <div class="menu-info">
+          <h3>Filter Coffee</h3>
+          <p>Authentic South Indian strong filter coffee.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>At Spicy South, we bring the flavors of Tamil Nadu, Kerala, Karnataka and Andhra to your plate. Fresh ingredients, traditional recipes, and a modern ambiance make us your go-to South Indian destination!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: contact@spicysouth.in | 📞 +91-9999-123-456</p>
+    <p>Address: MG Road, Bengaluru, Karnataka, India</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Spicy South Restaurant. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Optional: Add JS interactivity if needed
+    console.log("Welcome to Spicy South!");
+  </script>
+</body>
+</html>
